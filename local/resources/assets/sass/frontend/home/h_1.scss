@@ -1,0 +1,22 @@
+#h_1 {
+  margin-top: 30px;
+  h1 {
+    text-align: center;
+    color: $main-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 32px;
+  }
+  #slogan{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 15px;
+    margin: 10px 0;
+    p{
+      color: $sub-color;
+    }
+  }
+  #h_1_content{
+    padding: 20px 0;
+  }
+}

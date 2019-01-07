@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-    Nội Thất
+
 @stop
 @section('description')
-    Nội Thất
+
 @stop
 @section('keyword')
 
@@ -21,5 +21,8 @@
     @include('frontend.common.slider')
 @stop
 @section('container')
-    hello
+    @include('frontend.home.h_1')
+    @include('frontend.home.h_2')
+    @include('frontend.home.h_3')
+    @include('frontend.home.h_4')
 @stop

@@ -481,6 +481,110 @@ This class is added to the container
   color: #305582;
 }
 
+#h_5 {
+  margin-top: 30px;
+}
+
+#h_5 h3 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #305582;
+}
+
+#h_5 .one-item {
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: inherit;
+  width: 100%;
+  height: 378px;
+}
+
+#h_5 .one-item:before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #305582;
+  content: '';
+  z-index: 1;
+  opacity: 0;
+}
+
+#h_5 .one-item:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#h_5 .one-item:hover:before {
+  opacity: 1;
+}
+
+#h_5 .one-item:hover .img-item {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#h_5 .one-item:hover .content i {
+  -webkit-animation: slideInUp 1s;
+          animation: slideInUp 1s;
+  opacity: 1;
+}
+
+#h_5 .one-item:hover .content h3.title {
+  -webkit-animation: slideInUp 1s;
+          animation: slideInUp 1s;
+  opacity: 1;
+}
+
+#h_5 .one-item .img-item {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  width: 100%;
+  height: 378px;
+}
+
+#h_5 .one-item .content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+#h_5 .one-item .content i {
+  font-size: 24px;
+  line-height: 28.8px;
+  color: white;
+  opacity: 0;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+#h_5 .one-item .content h3.title {
+  font-size: 24px;
+  line-height: 40px;
+  padding: 5px 0 0;
+  opacity: 0;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+#h_5 .one-item .content h3.title a {
+  color: white;
+}
+
 #menu #menu-left ul.main-menu-item, #menu #menu-right ul.main-menu-item {
   display: block;
 }

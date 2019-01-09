@@ -1,0 +1,52 @@
+#footer {
+  background-color: $main-color;
+  .footer-left {
+    background-color: red;
+    width: 100%;
+    position: relative;
+    &:after {
+      border-style: solid;
+      border-width: 15px 0 15px 15px;
+      border-color: transparent transparent transparent #ccc;
+      content: '';
+      position: absolute;
+      right: -15px;
+    }
+  }
+  .footer-right {
+    h3 {
+      color: white;
+      text-transform: uppercase;
+      font-weight: bolder;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 25px;
+    }
+    .content {
+      padding-bottom: 30px;
+      .info-customer {
+        .one-input {
+          padding: 2px;
+          input {
+            border-radius: unset;
+          }
+        }
+      }
+      .one-button {
+        padding: 5px;
+        button {
+          color: white;
+          background-color: #ff9922;
+          border-radius: unset;
+          padding: 10px 10px;
+          font-size: 28px;
+          font-weight: bolder;
+          width: 100%;
+          &:first-letter {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

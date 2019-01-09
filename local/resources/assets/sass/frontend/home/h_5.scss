@@ -1,11 +1,14 @@
 #h_5 {
   margin-top: 30px;
+  padding: 40px 0;
+  background-color: $main-color;
   h3 {
     text-align: center;
     font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
-    color: $main-color;
+    color: white;
+    margin-bottom: 20px;
   }
   .one-item {
     overflow: hidden;
@@ -21,7 +24,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      background-color: $main-color;
+      background-color: #ff9922;
       content: '';
       z-index: 1;
       opacity: 0;
@@ -29,7 +32,7 @@
     &:hover {
       transition: all 0.5s;
       &:before {
-        opacity: 1;
+        opacity: 0.5;
       }
       .img-item {
         transform: scale(1.5);

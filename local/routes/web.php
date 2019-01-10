@@ -7,6 +7,9 @@ Route::get('/', function () {
 Route::get('/lien-he', function () {
     return view('frontend.contact.index');
 });
+Route::get('/tin-tuc', function () {
+    return view('frontend.news.index');
+});
 
 
 

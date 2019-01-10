@@ -34,6 +34,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="btn-submit">
+                            <a href="#">đăng ký</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-5 cont-right">

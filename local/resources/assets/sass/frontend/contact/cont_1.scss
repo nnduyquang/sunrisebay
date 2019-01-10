@@ -1,0 +1,110 @@
+#cont_1 {
+  h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: $main-color;
+    position: relative;
+    margin-bottom: 33px;
+    text-transform: uppercase;
+    &:before {
+      position: absolute;
+      content: "";
+      left: 230px;
+      right: 0;
+      top: 57%;
+      height: 1px;
+      background: #cfa28d;
+
+    }
+    & + p {
+      font-size: 15px;
+    }
+  }
+  .contact-form {
+    padding-bottom: 70px;
+    .cont-left {
+      h3 {
+        font-size: 24px;
+        color: #313131;
+        margin-top: 37px;
+        margin-bottom: 26px;
+        text-transform: uppercase;
+        &:after {
+          position: relative;
+          display: block;
+          content: "";
+          height: 2px;
+          width: 60px;
+          background: #cfa28d;
+          margin-top: 20px;
+        }
+      }
+      .content {
+        .input-group {
+          position: relative;
+          margin-bottom: 30px;
+          input, textarea {
+            width: 100%;
+            font-size: 15px;
+            outline: none;
+            border: 2px solid #f1f1f1;
+            padding: 13px 19px 14px 44px;
+          }
+          textarea {
+            padding: 4px 19px 14px 44px;
+          }
+          i {
+            position: absolute;
+            left: 21px;
+            top: 10px;
+            color: #5b5b5b;
+            z-index: 9;
+          }
+        }
+      }
+    }
+    .cont-right {
+      .info {
+        padding: 35px 30px 30px 45px;
+        border: 1px solid #d0a48f;
+        border-radius: 25px;
+        h3{
+          margin-top: 0;
+          font-size: 18px;
+          color: $main-color;
+          margin-bottom: 30px;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        h4{
+          text-transform: uppercase;
+          font-weight: bold;
+          line-height: 1.5;
+          font-size: 16px;
+          color: #333;
+          margin-bottom: 15px;
+        }
+        p{
+          margin-bottom: 23px;
+          font-size: 15px;
+        }
+        .content{
+          padding-bottom: 7px;
+          border-bottom: #ccc solid 1px;
+          margin-bottom: 20px;
+          p{
+            i{
+              color: #fff;
+              background: #cfa28d;
+              padding: 11px 13px;
+              float: left;
+              margin-top: 0;
+              border-radius: 50%;
+              margin-right: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

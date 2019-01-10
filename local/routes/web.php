@@ -4,7 +4,10 @@
 Route::get('/', function () {
     return view('frontend.home.index');
 });
-Route::post('/tim-kiem','FrontendController@getSearch')->name('search');
+Route::get('/lien-he', function () {
+    return view('frontend.contact.index');
+});
+
 
 
 

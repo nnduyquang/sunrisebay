@@ -39,10 +39,6 @@ a, a:hover, a:active {
   text-decoration: none !important;
 }
 
-img {
-  width: 100%;
-}
-
 .card {
   border: none;
   background-color: inherit;

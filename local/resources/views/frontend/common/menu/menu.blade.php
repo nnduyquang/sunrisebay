@@ -6,7 +6,7 @@
         <div class="row">
             <div id="menu-left" class="col-md-5">
                 <ul class="main-menu-item">
-                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="{{URL::to('/')}}">Trang Chủ</a></li>
                     <li><a href="#">Chủ Đầu Tư</a></li>
                     <li><a href="#">Vị Trí</a></li>
                     <li class="has-item-down"><a href="#">Mẫu Nhà</a>
@@ -29,7 +29,7 @@
                     <li><a href="#">Mặt Bằng</a></li>
                     <li><a href="#">Chính Sách Bán Hàng</a></li>
                     <li><a href="#">Tin Tức</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
+                    <li><a href="{{URL::to('lien-he')}}">Liên Hệ</a></li>
                 </ul>
             </div>
         </div>

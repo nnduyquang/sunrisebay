@@ -1,6 +1,6 @@
 <div class="tab-pane fade" id="slider-config" role="tabpanel">
     <div class="wrap-create-edit">
-        <strong class="text-title-left">Thêm Hình Thư Viện</strong>
+        <strong class="text-title-left">Thêm Hình Slider</strong>
         <div class="form-group">
             {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
         </div>

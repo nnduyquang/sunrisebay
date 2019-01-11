@@ -71,6 +71,30 @@
                         @endif
                     </div>
                 </div>
+                <div class="wrap-create-edit">
+                    <strong class="text-title-right">Thêm Hình Sản Phẩm </strong>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
+                        </div>
+                        <div class="form-group">
+                            <div id="add-image" class="row">
+                                @if(!IsNullOrEmptyString($post->sub_image))
+                                    @php
+                                        $listImage=explode(';',$post->sub_image);
+                                    @endphp
+                                    @foreach($listImage as $key=>$item)
+                                        <div class="col-md-3 text-center one-image">
+                                            {{ Html::image($item,'',array('id'=>'showHinh','class'=>'image-choose'))}}
+                                            {{ Form::hidden('image-choose[]', $item) }}
+                                            <span class='remove-image'>X</span>
+                                        </div>
+                                    @endforeach
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-12">

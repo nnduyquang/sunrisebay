@@ -8,25 +8,19 @@
                 <ul class="main-menu-item">
                     <li><a href="{{URL::to('/')}}">Trang Chủ</a></li>
                     <li><a href="#">Chủ Đầu Tư</a></li>
-                    <li><a href="#">Vị Trí</a></li>
-                    <li class="has-item-down"><a href="#">Mẫu Nhà</a>
-                        <ul class="sub-menu-item">
-                            <li><a href="">Nhà Phố</a></li>
-                            <li><a href="">Shophouse</a></li>
-                            <li><a href="">Biệt Thự Đơn Lập</a></li>
-                            <li><a href="">Biệt Thự Song Lập</a></li>
-                        </ul>
+                    <li><a href="#" id="menu_vitri">Vị Trí</a></li>
+                    <li><a href="#" id="menu_maunha">Mẫu Nhà</a>
                     </li>
                 </ul>
             </div>
             <div id="menu-logo" class="col-md-2">
                 <div class="wrap-logo">
-                    {{ HTML::image('images/logo/Logo-The-Sunrise-Bay-01.png', 'alt', array( 'width' => 70, 'height' => 70 )) }}
+                    <a href="{{URL::to('/')}}">{{ HTML::image('images/logo/Logo-The-Sunrise-Bay-01.png', 'alt', array( 'width' => 70, 'height' => 70 )) }}</a>
                 </div>
             </div>
             <div id="menu-right" class="col-md-5">
                 <ul class="main-menu-item">
-                    <li><a href="#">Mặt Bằng</a></li>
+                    <li><a href="#" id="menu_tienich">Tiện Ích</a></li>
                     <li><a href="#">Chính Sách Bán Hàng</a></li>
                     <li><a href="{{URL::to('tin-tuc')}}">Tin Tức</a></li>
                     <li><a href="{{URL::to('lien-he')}}">Liên Hệ</a></li>

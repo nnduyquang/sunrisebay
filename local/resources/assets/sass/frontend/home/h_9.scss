@@ -1,12 +1,17 @@
 #h_9 {
   margin-top: 190px;
   h3{
-    font-size: 17px;
+    font-size: 19px;
     text-transform: uppercase;
-    font-weight: bold;
     padding: 20px 0;
     color: $main-color;
     text-align: left;
+    line-height: 1.5;
+    width: fit-content;
+    border-bottom: 2px solid #D7AF53 ;
+    strong{
+      font-weight: bold;
+    }
   }
   .list-reasons {
     position: relative;
@@ -52,7 +57,7 @@
           margin-bottom: 20px;
         }
         &:before {
-          background: #025a69;
+          background: #365f90;
         }
         &:after {
           border-color: #025a69;
@@ -69,7 +74,7 @@
           margin-bottom: 10px;
         }
         &:before {
-          background: #026777;
+          background: #406fa7;
         }
         &:after {
           border-color: #026777;
@@ -86,7 +91,7 @@
           margin-bottom: 0;
         }
         &:before {
-          background: #025462;
+          background: #355c8a;
         }
         &:after {
           border-color: #025462;
@@ -103,7 +108,7 @@
           margin-bottom: 17px;
         }
         &:before {
-          background: #026170;
+          background: #3d699c;
         }
         &:after {
           border-color: #026170;
@@ -120,7 +125,7 @@
           margin-bottom: 19px;
         }
         &:before {
-          background: #016c7d;
+          background: #3d6796;
         }
         &:after {
           border-color: #016c7d;
@@ -137,7 +142,7 @@
           margin-bottom: 15px;
         }
         &:before {
-          background: #017285;
+          background: #4473a7;
         }
         &:after {
           border-color: #017285;
@@ -154,7 +159,7 @@
           margin-bottom: 4px;
         }
         &:before {
-          background: #017285;
+          background: #4b7db5;
         }
         &:after {
           border-color: #017285;
@@ -167,7 +172,7 @@
         right: 8px;
         top: 8px;
         bottom: 8px;
-        background: #024b57;
+        background: $main-color;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
         border-radius: 30px;

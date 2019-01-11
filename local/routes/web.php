@@ -1,15 +1,13 @@
 <?php
 
 
-Route::get('/', function () {
-    return view('frontend.home.index');
-});
+Route::get('/', 'FrontendController@getFrontend');
 Route::get('/lien-he', function () {
     return view('frontend.contact.index');
 });
-Route::get('/tin-tuc', function () {
-    return view('frontend.news.index');
-});
+Route::get('/tin-tuc', 'FrontendController@getTinTuc');
+Route::get('/tin-tuc/{path}', 'FrontendController@getDetailTinTuc');
+
 
 
 

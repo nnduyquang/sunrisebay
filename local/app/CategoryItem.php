@@ -7,20 +7,28 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryItem extends Model
 {
     protected $fillable = [
-        'id','name','path','description','image','image_mobile','level','parent_id','type','seo_id','order','is_active','created_at','updated_at'
+        'id', 'name', 'path', 'description', 'image', 'image_mobile', 'level', 'parent_id', 'type', 'seo_id', 'order', 'is_active', 'created_at', 'updated_at'
     ];
     protected $table = 'category_items';
     protected $hidden = ['id'];
-    public function seos(){
-        return $this->belongsTo('App\Seo','seo_id');
+
+    public function seos()
+    {
+        return $this->belongsTo('App\Seo', 'seo_id');
     }
+
     public function children()
     {
         return $this->hasMany('App\CategoryItem', 'parent_id')
             ->with('children');
     }
 
-    public function getAllOrderBy($order,$type)
+    public function posts()
+    {
+        return $this->belongsToMany('App\Post', 'category_many', 'category_id', 'item_id')->withTimestamps();
+    }
+
+    public function getAllOrderBy($order, $type)
     {
         return $this->where('type', $type)->orderBy($order)->get();
     }
@@ -28,7 +36,7 @@ class CategoryItem extends Model
     public function getAllParent($order, $type)
     {
         $newArray = array();
-        $categoryItems = self::getAllOrderBy($order,$type);
+        $categoryItems = self::getAllOrderBy($order, $type);
         foreach ($categoryItems as $key => $item) {
             if (!isset($item->parent_id)) {
                 array_push($newArray, $item);
@@ -36,7 +44,8 @@ class CategoryItem extends Model
         }
         return $newArray;
     }
-    public function prepareParameters($parameters,$type)
+
+    public function prepareParameters($parameters, $type)
     {
         if (!$parameters->has('is_active'))
             $parameters->request->add(['is_active' => null]);
@@ -54,8 +63,8 @@ class CategoryItem extends Model
         if ($parent_id == '-1') {
             $parameters['parent_id'] = null;
             $parameters['level'] = 0;
-        }else{
-            $parameters['level']=self::findLevelById($parent_id)+1;
+        } else {
+            $parameters['level'] = self::findLevelById($parent_id) + 1;
         }
         if ($parameters->input('image-choose')) {
             $listImage = $parameters->input('image-choose');
@@ -75,13 +84,32 @@ class CategoryItem extends Model
         }
         return $parameters;
     }
-    public function findLevelById($id){
-        return $this->where('id',$id)->first()->level;
+
+    public function findLevelById($id)
+    {
+        return $this->where('id', $id)->first()->level;
     }
+
     public function getAllCategoryByType($type)
     {
         return $this->where('type', $type)->orderBy('order')->get();
     }
+
+    public function getPostByCategoryIdHasLimit($id, $limit, $sort = 'ASC')
+    {
+        return $this->where('id', $id)->first()->posts()->orderBy('id', $sort)->take($limit)->get();
+    }
+
+    public function getPostByCategoryIdNoLimit($id, $sort = 'ASC')
+    {
+        return $this->where('id', $id)->first()->posts()->orderBy('id', $sort)->get();
+    }
+
+    public function getPostByCategoryIdExceptPostId($id, $exceptPostId, $limit, $sort = 'ASC')
+    {
+        return $this->where('id', $id)->first()->posts()->where('id', '!=', $exceptPostId)->orderBy('id', $sort)->take($limit)->get();
+    }
+
     public function setIsActiveAttribute($value)
     {
         if (!IsNullOrEmptyString($value)) {
@@ -102,6 +130,7 @@ class CategoryItem extends Model
         if (IsNullOrEmptyString($value))
             $this->attributes['order'] = 1;
     }
+
     public function setImageAttribute($value)
     {
         if ($value) {
@@ -109,6 +138,7 @@ class CategoryItem extends Model
         } else
             $this->attributes['image'] = null;
     }
+
     protected static function boot()
     {
         parent::boot();

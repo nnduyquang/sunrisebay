@@ -63,6 +63,19 @@
                         {{ Html::image('','',array('id'=>'showHinhPost','class'=>'show-image'))}}
                     </div>
                 </div>
+                <div class="wrap-create-edit">
+                    <strong class="text-title-right">Thêm Hình Bài Viết</strong>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            {!! Form::button('Thêm', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
+                        </div>
+                        <div class="form-group">
+                            <div id="add-image" class="row">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="wrap-create-edit">

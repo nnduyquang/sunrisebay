@@ -3,6 +3,17 @@ var plugins = {
     slider: $('#slider'),
 };
 $(document).ready(function () {
+    function scrollMenu(){
+        $('#menu_vitri').on('click', function(){
+            $('html, body').animate({scrollTop: $("#h_10").offset().top}, 'slow');
+        });
+        $('#menu_maunha').on('click', function(){
+            $('html, body').animate({scrollTop: $("#h_7").offset().top}, 'slow');
+        });
+        $('#menu_tienich').on('click', function(){
+            $('html, body').animate({scrollTop: $("#h_11").offset().top}, 'slow');
+        });
+    }
     function sidebar() {
         var trigger = $('#trigger,#close');
         trigger.on('click', function () {
@@ -18,6 +29,8 @@ $(document).ready(function () {
         })
     }
     sidebar();
+    scrollMenu();
+    new WOW().init();
     function runSlider() {
         plugins.slider.nivoSlider({
             effect: 'fade',

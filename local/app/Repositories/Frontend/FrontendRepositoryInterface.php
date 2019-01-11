@@ -11,6 +11,8 @@ interface FrontendRepositoryInterface
 
     public function getDetailTinTuc($path);
 
+    public function getDetailTrang($path);
+
     public function getFrontendCommon();
 
     public function getAllMenuFrontend();

@@ -21,8 +21,8 @@
   background: white;
   -webkit-transition: left 0.3s ease, -webkit-box-shadow 0.3s ease 0.2s;
   transition: left 0.3s ease, box-shadow 0.3s ease 0.2s;
-  -webkit-box-shadow: 0.5em 0 0 0 $sub-color, 0.6em 0 0 0 $sub-color;
-  box-shadow: 0.5em 0 0 0 $sub-color, 0.6em 0 0 0 $sub-color;
+  -webkit-box-shadow: 0.5em 0 0 0 $main-color, 0.6em 0 0 0 $main-color;
+  box-shadow: 0.5em 0 0 0 $main-color, 0.6em 0 0 0 $main-color;
 }
 .sidebar #close {
   //float: right;
@@ -99,7 +99,7 @@
 
 }
 .sidebar .background-sidebar{
-  background-image: url(../images/logo/logo_footer.png);
+  background-image: url(../images/logo/Logo-The-Sunrise-Bay-01.png);
   height: calc(56px*4);
   background-repeat: no-repeat;
   background-size: contain;

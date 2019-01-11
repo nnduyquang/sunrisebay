@@ -53,18 +53,31 @@ class FrontendRepository implements FrontendRepositoryInterface
         return $data;
     }
 
+    public function getDetailTrang($path)
+    {
+        $data=[];
+        $post=new Post();
+        $post_tintuc=$post->getPostByPath($path);
+        $data['post_tintuc']=$post_tintuc;
+        return $data;
+    }
+
 
     public function getFrontendCommon()
     {
         $data=[];
         $config = new Config();
-        $dataConfig = $config->getConfigByListName(['config-phone','config-address', 'config-email', 'config-contact', 'logo-config','script-js-header','script-js-body','contact-image-config','order-image-config','map-config','config-seo-title','config-seo-description','config-seo-image','slider-config']);
+        $dataConfig = $config->getConfigByListName(['config-company-name','config-phone','config-phone-1','config-contact', 'config-email', 'config-contact', 'logo-config','script-js-header','script-js-body','contact-image-config','order-image-config','map-config','config-seo-title','config-seo-description','config-seo-image','slider-config']);
         foreach ($dataConfig as $key => $item) {
+            if ($item->name == 'config-company-name')
+                $data['config-company-name'] = $item->content;
             if ($item->name == 'config-phone')
                 $data['hotline'] = $item->content;
+            if ($item->name == 'config-phone-1')
+                $data['config-phone-1'] = $item->content;
             if ($item->name == 'config-email')
                 $data['email'] = $item->content;
-            if ($item->name == 'config-address')
+            if ($item->name == 'config-contact')
                 $data['address'] = $item->content;
             if ($item->name == 'config-contact')
                 $data['contact'] = $item->content;

@@ -1,0 +1,1 @@
+Dear Sàn Giao Dịch BDS,<br><br>Thông tin khách hàng liên hệ trực tiếp từ website như sau:<br>- Email: {{$email}}<br>- Số điện thoại: {{$phone}}<br>Thanks,<br>

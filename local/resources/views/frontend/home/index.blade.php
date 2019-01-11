@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-
+{{$listFrontendCommon['config-seo-title']}}
 @stop
 @section('description')
-
+{{$listFrontendCommon['config-seo-description']}}
 @stop
 @section('keyword')
 
@@ -12,7 +12,7 @@
 
 @stop
 @section('image-og')
-
+{{URL::to($listFrontendCommon['config-seo-image'])}}
 @stop
 @section('styles')
     {{ Html::style('css/themes/default/default.css') }}

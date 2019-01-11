@@ -8,8 +8,8 @@
                 <ul class="main-menu-item">
                     <li><a href="{{URL::to('/')}}">Trang Chủ</a></li>
                     <li><a href="#">Chủ Đầu Tư</a></li>
-                    <li><a href="#" id="menu_vitri">Vị Trí</a></li>
-                    <li><a href="#" id="menu_maunha">Mẫu Nhà</a>
+                    <li><a href="#" class="menu_vitri">Vị Trí</a></li>
+                    <li><a href="#" class="menu_maunha">Mẫu Nhà</a>
                     </li>
                 </ul>
             </div>
@@ -20,8 +20,8 @@
             </div>
             <div id="menu-right" class="col-md-5">
                 <ul class="main-menu-item">
-                    <li><a href="#" id="menu_tienich">Tiện Ích</a></li>
-                    <li><a href="#">Chính Sách Bán Hàng</a></li>
+                    <li><a href="#" class="menu_tienich">Tiện Ích</a></li>
+                    <li><a href="{{URL::to('trang/chinh-sach-ban-hang')}}">Chính Sách Bán Hàng</a></li>
                     <li><a href="{{URL::to('tin-tuc')}}">Tin Tức</a></li>
                     <li><a href="{{URL::to('lien-he')}}">Liên Hệ</a></li>
                 </ul>

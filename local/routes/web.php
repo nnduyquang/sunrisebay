@@ -7,8 +7,11 @@ Route::get('/lien-he', function () {
 });
 Route::get('/tin-tuc', 'FrontendController@getTinTuc');
 Route::get('/tin-tuc/{path}', 'FrontendController@getDetailTinTuc');
+Route::get('/trang/{path}', 'FrontendController@getDetailTrang');
 
-
+Route::post('/sendmail/sendFooter', ['as' => 'mail.sendmailFooter', 'uses' => 'MailController@sendMailFooter']);
+Route::post('/sendmail/sendContact', ['as' => 'mail.sendmailContact', 'uses' => 'MailController@sendMailContact']);
+Route::post('/sendmail/sendSideBar', ['as' => 'mail.sendmailSideBar', 'uses' => 'MailController@sendMailSideBar']);
 
 
 

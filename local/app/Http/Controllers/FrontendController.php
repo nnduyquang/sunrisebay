@@ -25,6 +25,10 @@ class FrontendController extends Controller
         $data = $this->frontendRepository->getDetailTinTuc($path);
         return view('frontend.detail-post.index', compact('data'));
     }
+    public function getDetailTrang($path){
+        $data = $this->frontendRepository->getDetailTrang($path);
+        return view('frontend.page.index', compact('data'));
+    }
 
 }
 

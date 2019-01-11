@@ -65,16 +65,18 @@
         .btn-submit{
           text-align: center;
           width: 100%;
-          a{
-            text-transform: uppercase;
-            font-size: 15px;
-            font-weight: bold;
-            color: #f1cab7;
-            border: none;
-            outline: none;
-            background: $main-color;
-            padding: 12px 26px;
-            border-radius: 30px;
+          .button-group{
+            button{
+              text-transform: uppercase;
+              font-size: 15px;
+              font-weight: bold;
+              color: #f1cab7;
+              border: none;
+              outline: none;
+              background: $main-color;
+              padding: 12px 26px;
+              border-radius: 30px;
+            }
           }
         }
       }

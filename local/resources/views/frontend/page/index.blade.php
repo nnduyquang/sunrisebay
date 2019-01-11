@@ -3,7 +3,7 @@
 {{$data['post_tintuc']->title}}
 @stop
 @section('description')
-{{$data['post_tintuc']->description}}
+{{$data['post_tintuc']->title}}
 @stop
 @section('keyword')
 
@@ -12,7 +12,7 @@
 
 @stop
 @section('image-og')
-{{$data['post_tintuc']->image}}
+{{URL::to($listFrontendCommon['config-seo-image'])}}
 @stop
 @section('styles')
     {{ Html::style('css/themes/default/default.css') }}
@@ -21,6 +21,6 @@
     @include('frontend.common.slider')
 @stop
 @section('container')
-    @include('frontend.detail-post.dp_1')
+    @include('frontend.page.pa_1')
     @include('frontend.home.h_6')
 @stop

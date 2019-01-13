@@ -7,7 +7,7 @@
             <div id="menu-left" class="col-md-5">
                 <ul class="main-menu-item">
                     <li><a href="{{URL::to('/')}}">Trang Chủ</a></li>
-                    <li><a href="#">Chủ Đầu Tư</a></li>
+                    <li><a href="{{URL::to('trang/chu-dau-tu')}}">Chủ Đầu Tư</a></li>
                     <li><a href="#" class="menu_vitri">Vị Trí</a></li>
                     <li><a href="#" class="menu_maunha">Mẫu Nhà</a>
                     </li>

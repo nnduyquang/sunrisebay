@@ -1,6 +1,6 @@
 <div id="h_7">
     <div class="container">
-        <h3>Các loại hình sản phẩm tại The Sunrice bay đà nẵng</h3>
+        <h3>Các loại hình sản phẩm tại The Sunrise bay đà nẵng</h3>
         <div class="bottom_makeup"
              style="background:url({{URL::asset('images/temps/home/bg_content.png')}}) bottom center no-repeat;">
         </div>

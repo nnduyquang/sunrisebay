@@ -13,7 +13,10 @@
     {{--<meta property="og:type" content="article" />--}}
     <meta property="og:url" content="@yield('url-og')"/>
     <meta property="og:image" content="@yield('image-og')"/>
+    <meta property="og:image:alt" content="Dự án The Sunrise Bay Đà Nẵng" />
+    <meta property="og:type" content="website"/>
     <meta property="og:description" content="@yield('description')"/>
+    <meta property="og:locale" content="vi_VN"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
     {{--<meta property="og:site_name" content="Site Name, i.e. Moz" />--}}
     {{ Html::style('css/core.common.css') }}

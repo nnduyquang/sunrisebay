@@ -9,11 +9,9 @@
 
 @stop
 @section('url-og')
-
+http://the-sunrisebay-danang.net/
 @stop
-@section('image-og')
-{{URL::to($listFrontendCommon['config-seo-image'])}}
-@stop
+@section('image-og'){{URL::to($listFrontendCommon['config-seo-image'])}}@stop
 @section('styles')
     {{ Html::style('css/themes/default/default.css') }}
 @stop

@@ -63,8 +63,8 @@
                         <p>{{loai_bo_html_tag($listFrontendCommon['address'])}}</p>
                         <div class="content">
                             <p>
-                                <i class="fa fa-phone"></i><strong>Holine</strong><br>
-                                {{$listFrontendCommon['config-phone-1']}}
+                                <i class="fa fa-phone"></i><strong>Hotline</strong><br>
+                                {{$listFrontendCommon['config-phone-1']}} - {{$listFrontendCommon['config-phone-2']}}
                             </p>
                             <p>
                                 <i class="fa fa-envelope"></i><strong>Email</strong><br>
